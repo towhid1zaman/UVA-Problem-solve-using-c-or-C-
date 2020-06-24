@@ -44,8 +44,8 @@ void bfs(string s){
         q.pop();
         for(int i= 0; i<adj[top].size(); i++){
             string next = adj[top][i];
-            if(vis.count(next)==0){
-                vis[next] = vis[top] + 1;
+            if(vis[next]==0){
+                vis[next] = 1;
                 q.push(next);
                 par[next] = top;
             }
